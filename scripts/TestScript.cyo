@@ -1,0 +1,49 @@
+Scene testscene1
+    | This is a test script!
+Choice
+    | Test 1
+        1choice
+    | Test 2
+        -once 2choice
+    | Test no description
+        testnodescription
+Endchoice
+
+Scene 2choice
+    | Test 2
+Choice
+    | Back to test 1
+        testscene1
+    | Test 4
+        4choice
+Endchoice
+
+Scene 1choice
+    | Test 1
+Choice
+    | Test 3
+        3choice
+    | Loop back
+        1choice
+Endchoice
+
+Scene 3choice
+    | Test 3
+Choice
+    | Test 4
+        4choice
+    | Back to the start
+        -once 1choice
+Endchoice
+
+Scene 4choice
+    | Test 4
+
+Scene testnodescription
+Choice
+    | Test
+        5choice
+Endchoice
+
+Scene 5choice
+    | Works!

@@ -1,1 +1,2 @@
 # CYOScript
+My major project for university. This is a scripting language for creating choose-your-own adventure games, encapsulated in a library behind a façade pattern. It also includes a simple GUI created using JavaFX. An example script is included in the "scripts" folder.

@@ -1,0 +1,65 @@
+Scene introscene
+    | You see a tower in the distance.
+    | You enter the tower. You're faced with two doors, one red, one blue. Which one do you pick?
+Choice
+    | Open the red door
+    | Second line
+    | Third line
+        redchoice
+    | Open the blue door
+        bluechoice
+Endchoice
+
+Scene redchoice
+    | You enter the red door. There's a monster! What do you do?
+Choice
+    | Fight the monster
+        fightchoice
+    | Run away!
+        -once runchoice
+Endchoice
+
+Scene fightchoice
+    | You fight the monster!
+Choice
+    | Punch it
+        punchscene
+    | Slash it with a knife
+        slashscene
+    | Run away!
+        runchoice
+Endchoice
+
+Scene punchscene
+    | You punch the monster
+
+Scene slashscene
+    | You pull out a knife and slash the monster
+
+Scene runchoice
+    | You run away!
+Choice
+    | Run back
+        redchoice
+Endchoice
+
+Scene bluechoice
+    | You enter the blue door. You see a treasure chest. Do you open it?
+Choice
+    | Open the chest
+        openchoice
+    | Leave it
+        leavechoice
+Endchoice
+
+Scene openchoice
+    | The chest won't open!
+Choice
+    | Leave it
+        leavechoice
+    | Try again
+        openchoice
+Endchoice
+
+Scene leavechoice
+    | You decide to leave the chest.
